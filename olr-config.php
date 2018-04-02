@@ -42,11 +42,11 @@ class Online_Reg_Config_Class{
   var $c_build_reg_login_pwd = "login3"; // for Build Registrations page, case sensitive
 
   // MySQL Database parameters
-  var $c_dbhost = "yourhost";  // database host name
-  var $c_dbname = "weblogin_onlinereg";  // database name
-  var $c_dbusername = "weblogin_oruser1";  // user name
-  var $c_dbpassword = "password";  // user password
-  var $c_dbtable = "EVENT2016"; // database table name
+  var $c_dbhost = "eu-cdbr-sl-lhr-01.cleardb.net";  // database host name
+  var $c_dbname = "ibmx_2231abdff5adb2d";  // database name
+  var $c_dbusername = "b0f0793766502c";  // user name
+  var $c_dbpassword = "e9024ca5 ";  // user password
+  var $c_dbtable = "EVENT2018"; // database table name
   var $c_db_table_def_file = "table-def.sql";
 
   // Maximum number of persons in registration form
