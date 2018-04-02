@@ -1,0 +1,32 @@
+/* Version 1.2 */
+
+/* Set colors and font for whole page */
+body {font-family: Arial, Helvetica, sans-serif; font-size: 10pt; 
+color: #000000; background-color: #FFFFFF; line-height: 1.5; 
+margin-left: auto; margin-right: auto; padding:10px; border:0px;
+width: 750px;
+border: solid 3px #2040A0; border-radius: 25px;
+box-shadow: 6px 6px 6px #606060;}
+
+#olr-content {
+margin-right: auto; margin-left: auto; margin-top: 0px; margin-bottom: 0px; 
+}
+
+#olr-content p, #olr-content td, #olr-content span, #olr-content input, 
+#olr-content textarea, #olr-content select, #olr-content option{
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 10pt;}
+
+/* Make each fieldset/section have rounded corners and shadow */
+#olr-content fieldset {margin-top: 10px; border-radius: 10px; box-shadow: 3px 3px 3px #606060;}
+
+#olr-content legend {font-weight: bold;} /* title of fieldset/section is bold */
+
+.olr-label {line-height: 200%;} /* extra vertical space for labels */
+.olr-err {border: 3px solid red;} /* red box around fields with errors */
+
+.olr-line-ht-150{line-height: 150%;} /* extra line spacing */
+.olr-bold {font-weight: bold;}
+.olr-required {font-weight: bold;}
+.olr-left {text-align: left;}
+.olr-right {text-align: right;}

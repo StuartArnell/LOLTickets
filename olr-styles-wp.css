@@ -1,0 +1,112 @@
+/* Version 1.2 */
+/* This has many more attributes than is necessary for plain html
+ * to override attributes commonly set in WordPress Themes. */
+ 
+/* Set colors and font for whole page */
+/* Edit or delete this to match other pages in the web site */
+body {font-family: Arial, Helvetica, sans-serif; font-size: 10pt; 
+color: #000000; background-color: #FFFFFF;
+margin:0px; padding:10px; border:0px;}
+
+/* Put main content in centered 750px box with rounded corners and shadow */
+/* Edit this as desired, like changing width, removing the box, etc. */
+#olr-content {
+width: 750px; padding: 15px;
+margin-right: auto; margin-left: auto; margin-top: 0px; margin-bottom: 0px; 
+color: black; background-color: white; 
+border: solid 3px #2040A0; border-radius: 25px;
+box-shadow: 6px 6px 6px #606060;
+}
+
+/* Most of the rest of this is to override WordPress Themes */
+
+#olr-content p, #olr-content td, #olr-content span, 
+#olr-content textarea, #olr-content select, #olr-content option{
+color: black; background-color: initial;
+}
+
+#olr-content table{
+font-weight: normal;
+border: 0; margin: 0; padding: 0;
+border-collapse: collapse; border-spacing: 0;
+height: auto; line-height: normal; max-width: 100%; width: auto;
+color: black; background-color: initial; background-position: 0;
+}
+
+#olr-content table th{
+font-weight: bold; border: 0;  padding: 2px; margin: 0;
+}
+
+#olr-content table td{
+font-weight: normal; border: 0;  padding: 2px; margin: 0;
+}
+
+#olr-content table tr:nth-child(2n+1) th,
+#olr-content table tr:nth-child(2n+1) td
+{ background-color: initial;}
+
+#olr-content input, 
+#olr-content input[type="text"],
+#olr-content textarea,
+#olr-content select, #olr-content option {
+font-weight: normal; color: black;
+border-radius: 0;
+margin: 0; padding: 0; 
+box-shadow: none; text-shadow: none;
+transition: all 0s ease 0s;
+height: auto; line-height: normal; width: auto;
+vertical-align: middle;
+background-position: 0;
+}
+
+#olr-content input[type="submit"],
+#olr-content input[type="button"] {
+font-weight: bold; color: black;
+margin: 0; padding: 4px; border: outset; border-radius: 0;
+box-shadow: none; text-shadow: none;
+transition: all 0s ease 0s;
+cursor: pointer;
+height: auto; line-height: normal; width: auto;
+vertical-align: middle;
+background: #CCCCCC; background-image: none;
+background-image: none;
+background-position: 0;
+}
+
+#olr-content input[type="submit"]:hover,
+#olr-content input[type="button"]:hover {
+background-position: 0;
+background: none; background-image: none;
+transition: all 0s ease 0s;
+}
+
+/* Make each fieldset/section have rounded corners and shadow */
+/* Edit this as you see fit. */
+#olr-content fieldset {
+margin: 0; margin-top: 10px; padding: 5px;
+border: 1px solid black; border-radius: 10px; 
+box-shadow: 3px 3px 3px #606060;
+}
+
+#olr-content legend { /* title of fieldset/section is larger bold */
+font-size: 120%; font-weight: bold;
+height: auto; line-height: normal; width: auto;
+border: 0; margin: 4px; padding: 4px;
+color: black; background-color: initial;
+}
+
+/* extra vertical space for labels */
+#olr-content .olr-label {line-height: 200%;}
+
+/* red box around fields with errors */
+#olr-content .olr-err {border: 3px solid red;}
+#olr-content input .olr-err,
+#olr-content input[type="text"] .olr-err,
+#olr-content textarea .olr-err 
+{border: 3px solid red;}
+
+#olr-content .olr-line-ht-150{line-height: 150%;} /* extra line spacing */
+#olr-content .olr-bold {font-weight: bold;}
+#olr-content .olr-required {font-weight: bold;}
+#olr-content .olr-left {text-align: left;}
+#olr-content .olr-right {text-align: right;}
