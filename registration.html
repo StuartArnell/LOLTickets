@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns='http://www.w3.org/1999/xhtml' xml:lang='en' lang='en'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8' />
+<meta http-equiv='Content-Script-Type' content='text/javascript' />
+<title>LOL Event 2018 Online Registration</title>
+<meta name='viewport' content='width=device-width, initial-scale=1' />
+<link rel='stylesheet' type='text/css' href='olr-styles.css' />
+</head>
+<body>
+<div id='olr-content'>
+<form method='post' id='OnlineRegForm' name='OnlineRegForm' action='olr-pp-send.php'>
+<h2 style='text-align:center;'>LOL Event 2018<br />Online Registration</h2>
+<p>Required fields are in <b>BOLD</b> </p>
+
+<!-- list of required fields -->
+<input type='hidden' name='required_fields' value='txt_firstname1,txt_lastname1,rad_gender1,txt_street,txt_city,txt_state,txt_zip,txt_email1,num_men_dancers,num_women_dancers,txt_phone1,rad_number1,sel_number2' />
+<span class='olr-label olr-required'>First Name:&nbsp;</span>  <input type='text' name='txt_firstname1'  size='20' maxlength='20' />&nbsp;&nbsp;&nbsp;
+<span class='olr-label olr-required'>Last Name:&nbsp;</span>  <input type='text' name='txt_lastname1'  size='20' maxlength='20'/>&nbsp;&nbsp;&nbsp;
+<br />
+
+<input type='checkbox' name='chk_noshare' value='' />
+Do NOT share personal information<br />
+<span class='olr-label olr-required'>Phone 1:&nbsp;
+<input type='text' name='txt_phone1' value='' maxlength='12' />&nbsp;&nbsp; 
+  <input type='radio' name='rad_phone1' value='Home' checked='checked' /> Home&nbsp;&nbsp;
+  <input type='radio' name='rad_phone1' value='Cell' /> Cell&nbsp;&nbsp;
+  <input type='radio' name='rad_phone1' value='Work' /> Work&nbsp;&nbsp;
+</span>
+<br />
+
+<span class='olr-label olr-required'>Email &nbsp;</span>
+  <input type='text' name='txt_email1' size='40' maxlength='40' /><br />
+
+<span class='olr-label'>Notes &nbsp;</span>(max length = 1000 chars)<br />
+  <textarea name='txt_notes' cols='80' rows='13'></textarea><br />
+<
+<fieldset class='olr-line-ht-150'>
+  <legend> Attendance and Merchandise </legend>
+<table border='0' cellspacing='0' cellpadding='4'>
+  <tbody>
+    <tr>
+      <th align='left'>Option</th>
+      <th align='left'>Price&nbsp;&nbsp;&nbsp;&nbsp;</th>
+      <th align='right'>Qty</th>
+    </tr>
+    <tr>
+      <td>Attendee</td>
+      <td align='left'>$<span id='aprice1'>10</span></td>
+      <td align='right'><input type='text' size='2' maxlength='2' value='0' 
+        name='num_aqty1' 
+        onchange='UpdateTotal(true);' /></td>
+    </tr>
+    <tr>
+    
+  </tbody>
+</table>
+<input type='hidden' name='hid_total' value='0' />
+<input type='hidden' name='hid_paypaltotal' value='0' />
+</fieldset>
+
+<fieldset>
+  <legend> Payment </legend>
+<p>Please fill in the form and click the Pay button. <br />
+You will be asked to confirm before transferring to PayPal, and you can complete or cancel the transaction in PayPal. <br />
+In PayPal you can pay via your PayPal account, or use a credit card. <br />
+No PayPal account is needed for credit card payments. <br />
+A confirmation email will be sent from both PayPal and from us when payment is completed (NO email if transaction is cancelled). </p>
+<p style='text-align:center;'><input type='submit' value=' Pay ' name='submit'
+  onclick='return submit_form();' /></p></fieldset>
+<p>For online registration problems, please contact the webmaster: stuart.arnell@gmail.com</p>
+</form>
+<p style='font-family:sans-serif; font-size:8pt; text-align:center;'>Created by <a href='http://www.glennman.com/online-reg/home.html' target='_blank'>GM Online Registration System</a>, version 1.3.4</p>
+<script type='text/javascript' src='olr-validate.js'></script>
+<script type='text/javascript' src='olr-init.js'></script>
+</div>
+</body>
+</html>
