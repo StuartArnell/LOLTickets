@@ -32,7 +32,7 @@ class Online_Reg_Config_Class{
   var $c_online_reg_fname = "online-reg-base.html";
   var $c_reg_system_info_in_footer = 1; // include reg system name and version in reg page footer
   var $c_notify_url = "http://ec2-18-188-186-78.us-east-2.compute.amazonaws.com/LOLTickets/Event2018/olr-pp-ipn.php";
-  var $c_return_url = "http://ec2-18-188-186-78.us-east-2.compute.amazonaws.com/LOLTickets/Event2016/online-reg.html";
+  var $c_return_url = "http://ec2-18-188-186-78.us-east-2.compute.amazonaws.com/LOLTickets/Event2018/online-reg.html";
   var $c_paypal_page_style = "";
   var $c_excel_filename = "OnlineRegs.csv";  // download from Print Regs page
   var $c_payment_email = "stuart.arnell@gmail.com";  // "From" field for emails
@@ -53,24 +53,24 @@ class Online_Reg_Config_Class{
   var $c_max_persons = 4;
 
   // Use child data
-  var $c_UseChildData = 1;
-  var $c_UseChildAge = 1;
+  var $c_UseChildData = 0;
+  var $c_UseChildAge = 0;
 
   // Use student data
-  var $c_UseStudentData = 1;
+  var $c_UseStudentData = 0;
 
   // Use gender data
-  var $c_UseGenderData = 1;
+  var $c_UseGenderData = 0;
 
   // Use Do No Share Data checkbox
   var $c_Use_Do_Not_Share = 1;
 
   // Use donation field
-  var $c_UseDonation = 1;
+  var $c_UseDonation = 0;
 
   // Deposit amount for 2-part payment
-  var $c_DepositPrice = 150;
-  var $c_DepositDueDate = "June 1, 2016";
+  var $c_DepositPrice = 0;
+  var $c_DepositDueDate = "";
 
   // Use PayPal fee checkbox
   var $c_UsePayPalFee = 1;
@@ -86,36 +86,8 @@ class Online_Reg_Config_Class{
   // name attribute must be unique, including data, phone, radio, selections
   // required attribute is optional.
   var $c_aryField_Defs = array(
-    array("label" => "Street", "abbrev" => "Street", "name" => "street", "type" => "text", "size" => 30, "required" => 1),
-    array("label" => "City", "abbrev" => "City", "name" => "city", "type" => "text", "size" => 30, "required" => 1),
-    array("label" => "State", "abbrev" => "State", "name" => "state", "type" => "state", "size" => 2, "required" => 1),
-    array("label" => "Zip", "abbrev" => "Zip", "name" => "zip", "type" => "zip", "size" => 5, "required" => 1),
     array("label" => "Email", "abbrev" => "Email", "name" => "email1", "type" => "email", "size" => 40, "required" => 1),
-    array("label" => "Number of Men Dancers", "abbrev" => "Men Dancers", "name" => "men_dancers", "type" => "num", "size" => 1, "required" => 1),
-    array("label" => "Number of Women Dancers", "abbrev" => "Women Dancers", "name" => "women_dancers", "type" => "num", "size" => 1, "required" => 1),
-    array("label" => "Custom Text", "abbrev" => "Custom Text", "name" => "custom_text", "type" => "text", "size" => 40),
-    array("label" => "Custom Number", "abbrev" => "Custom Number", "name" => "custom_num", "type" => "num", "size" => 2),
-    array("label" => "Custom Option", "abbrev" => "Custom Option", "name" => "custom_opt", "type" => "check", "size" => 1),
     array("label" => "Notes", "abbrev" => "Notes", "name" => "notes", "type" => "text", "size" => 1000),
-    array("label" => "Hospitality Request: Number of People", "abbrev" => "Hosp Req Num", "name" => "hosp_req_num", "type" => "num", "size" => 1),
-    array("label" => "Hospitality Request: Number of Beds", "abbrev" => "Hosp Req Beds", "name" => "hosp_req_beds", "type" => "num", "size" => 1),
-    array("label" => "Hospitality Request: Smoker", "abbrev" => "Hosp Req Smoker", "name" => "hosp_req_smoker", "type" => "check", "size" => 1),
-    array("label" => "Hospitality Request: Cats OK", "abbrev" => "Hosp Req Cats", "name" => "hosp_req_cats", "type" => "check", "size" => 1),
-    array("label" => "Hospitality Request: Dogs OK", "abbrev" => "Hosp Req Dogs", "name" => "hosp_req_dogs", "type" => "check", "size" => 1),
-    array("label" => "Hospitality Request: Notes (Allergies, etc.)", "abbrev" => "Hosp Req Notes", "name" => "hosp_req_notes", "type" => "text", "size" => 60),
-    array("label" => "Hospitality Request: Carpooling With", "abbrev" => "Carpooler", "name" => "hosp_req_carpooler", "type" => "text", "size" => 40),
-    array("label" => "Hospitality Offer: Number of People", "abbrev" => "Hosp Offer Num", "name" => "hosp_offer_num", "type" => "num", "size" => 1),
-    array("label" => "Hospitality Offer: Number of Beds", "abbrev" => "Hosp Offer Beds", "name" => "hosp_offer_beds", "type" => "num", "size" => 1),
-    array("label" => "Hospitality Offer: Smoker", "abbrev" => "Hosp Offer Smoker", "name" => "hosp_offer_smoker", "type" => "check", "size" => 1),
-    array("label" => "Hospitality Offer: Have Cats", "abbrev" => "Hosp Offer Cats", "name" => "hosp_offer_cats", "type" => "check", "size" => 1),
-    array("label" => "Hospitality Offer: Have Dogs", "abbrev" => "Hosp Offer Dogs", "name" => "hosp_offer_dogs", "type" => "check", "size" => 1),
-    array("label" => "Housing: Offsite", "abbrev" => "Cab Offsite", "name" => "housing_offsite", "type" => "num", "size" => 1),
-    array("label" => "Housing: Womens Cabin", "abbrev" => "Cab Women", "name" => "housing_women", "type" => "num", "size" => 1),
-    array("label" => "Housing: Mens Cabin", "abbrev" => "Cab Men", "name" => "housing_men", "type" => "num", "size" => 1),
-    array("label" => "Housing: Couples Cabin", "abbrev" => "Cab Couple", "name" => "housing_couple", "type" => "num", "size" => 1),
-    array("label" => "Housing: Snorers Cabin", "abbrev" => "Cab Snore", "name" => "housing_snore", "type" => "num", "size" => 1),
-    array("label" => "Housing: Adult in Family Cabin", "abbrev" => "Cab Fam Adult", "name" => "housing_family_adult", "type" => "num", "size" => 1),
-    array("label" => "Housing: Child in Family Cabin", "abbrev" => "Cab Fam Child", "name" => "housing_family_child", "type" => "num", "size" => 1)
   );
 
   // Max width of single line of text.
@@ -192,17 +164,14 @@ class Online_Reg_Config_Class{
   // Attendance options.
   // Each item is (label, abbreviation, price).
   var $c_aryAttendance_Fields = array(
-    array("label" => "Adult", "abbrev" => "Adult", "price" => 85),
-    array("label" => "Student Jr High and up", "abbrev" => "Student", "price" => 45),
-    array("label" => "Child 12 and under", "abbrev" => "Child", "price" => 35),
-    array("label" => "CDSS Member Discount", "abbrev" => "CDSS", "price" => -5),
+    array("label" => "Tickets", "abbrev" => "Adult", "price" => 10),
   );
 
   // Dis/Allow select of multiple attendance options.
-  var $c_attendance_multi_select = 0;
+  var $c_attendance_multi_select = 1;
 
   // Early registration discount. Use negative number.
-  var $c_early_reg_discount = -10;
+  var $c_early_reg_discount = 0;
 
   // Late registration fee
   var $c_late_reg_fee = 0;
@@ -214,45 +183,45 @@ class Online_Reg_Config_Class{
   // Example: for January 15, 2016, the early registration discount
   // will be applied through Jan 15, and stop on Jan 16.
   // The late registration fee will start on Jan 15.
-  var $c_early_late_reg_cutoff_date = "January 15, 2016";
+  var $c_early_late_reg_cutoff_date = "";
 
   // Merchandise Data Fields.
   // Each item is (label, abbreviation, price).
-  var $c_aryMerchandise_Fields = array(
-    array("label" => "T-Shirt Small", "abbrev" => "TShirtS",  "price" => 14),
-    array("label" => "T-Shirt Medium",    "abbrev" => "TShirtM", "price" => 14),
-    array("label" => "T-Shirt Large",  "abbrev" => "TShirtL",  "price" => 14),
-    array("label" => "T-Shirt Extra Large",  "abbrev" => "TShirtXL", "price" => 14),
+  // var $c_aryMerchandise_Fields = array(
+  //  array("label" => "T-Shirt Small", "abbrev" => "TShirtS",  "price" => 14),
+  //  array("label" => "T-Shirt Medium",    "abbrev" => "TShirtM", "price" => 14),
+  //  array("label" => "T-Shirt Large",  "abbrev" => "TShirtL",  "price" => 14),
+  //  array("label" => "T-Shirt Extra Large",  "abbrev" => "TShirtXL", "price" => 14),
   );
 
   // Membership options
-  var $c_member_single_price = 20;
-  var $c_member_family_price = 30;
+  // var $c_member_single_price = 20;
+  // var $c_member_family_price = 30;
 
   // Maximum number of musicians
-  var $c_max_musicians = 2;
+  // var $c_max_musicians = 2;
 
   // Musician Data Fields.
   // Each item is (label, abbreviation, name, datatype, datasize).
-  var $c_aryMusician_Fields = array(
-    array("label" => "Musician Name", "abbrev" => "Mus Name", "name" => "mus_name", "type" => "text", "size" => 20),
-    array("label" => "Instruments", "abbrev" => "Mus Inst", "name" => "mus_instruments", "type" => "text", "size" => 60),
-    array("label" => "Bands", "abbrev" => "Mus Band", "name" => "mus_bands", "type" => "text", "size" => 60),
-    array("label" => "In Band Scramble", "abbrev" => "Mus BScramble", "name" => "mus_bandscramble", "type" => "check", "size" => 1),
-    array("label" => "In Open Band", "abbrev" => "Mus BOpen", "name" => "mus_bandopen", "type" => "check", "size" => 1),
-    array("label" => "In Named Band", "abbrev" => "Mus BNamed", "name" => "mus_bandnamed", "type" => "check", "size" => 1)
-  );
+  // var $c_aryMusician_Fields = array(
+  //  array("label" => "Musician Name", "abbrev" => "Mus Name", "name" => "mus_name", "type" => "text", "size" => 20),
+  //  array("label" => "Instruments", "abbrev" => "Mus Inst", "name" => "mus_instruments", "type" => "text", "size" => 60),
+  //  array("label" => "Bands", "abbrev" => "Mus Band", "name" => "mus_bands", "type" => "text", "size" => 60),
+  //  array("label" => "In Band Scramble", "abbrev" => "Mus BScramble", "name" => "mus_bandscramble", "type" => "check", "size" => 1),
+  //  array("label" => "In Open Band", "abbrev" => "Mus BOpen", "name" => "mus_bandopen", "type" => "check", "size" => 1),
+  //  array("label" => "In Named Band", "abbrev" => "Mus BNamed", "name" => "mus_bandnamed", "type" => "check", "size" => 1)
+  //);
 
   // Maximum number of callers
-  var $c_max_callers = 2;
+  // var $c_max_callers = 2;
 
   // Caller Data Fields.
   // Each item is (label, abbreviation, name, datatype, datasize, required).
-  var $c_aryCaller_Fields = array(
-    array("label" => "Caller Name",    "abbrev" => "Call Name",   "name" => "call_name",    "type" => "text", "size" => 20),
-    array("label" => "Call Contra",  "abbrev" => "Call Contra", "name" => "call_contra",  "type" => "check", "size" => 1),
-    array("label" => "Call English", "abbrev" => "Call Eng",    "name" => "call_english", "type" => "check", "size" => 1),
-    array("label" => "Call Other",   "abbrev" => "Call Other",  "name" => "call_other",   "type" => "text", "size" => 60)
+  // var $c_aryCaller_Fields = array(
+  //  array("label" => "Caller Name",    "abbrev" => "Call Name",   "name" => "call_name",    "type" => "text", "size" => 20),
+  //  array("label" => "Call Contra",  "abbrev" => "Call Contra", "name" => "call_contra",  "type" => "check", "size" => 1),
+  //  array("label" => "Call English", "abbrev" => "Call Eng",    "name" => "call_english", "type" => "check", "size" => 1),
+  //  array("label" => "Call Other",   "abbrev" => "Call Other",  "name" => "call_other",   "type" => "text", "size" => 60)
   );
 
   // PayPal Transaction Fees
