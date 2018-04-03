@@ -53,27 +53,27 @@ class Online_Reg_Config_Class{
   var $c_max_persons = 4;
 
   // Use child data
-  var $c_UseChildData = 1;
-  var $c_UseChildAge = 1;
+  var $c_UseChildData = 0;
+  var $c_UseChildAge = 0;
 
   // Use student data
-  var $c_UseStudentData = 1;
+  var $c_UseStudentData = 0;
 
   // Use gender data
-  var $c_UseGenderData = 1;
+  var $c_UseGenderData = 0;
 
   // Use Do No Share Data checkbox
-  var $c_Use_Do_Not_Share = 1;
+  var $c_Use_Do_Not_Share = 0;
 
   // Use donation field
-  var $c_UseDonation = 1;
+  var $c_UseDonation = 0;
 
   // Deposit amount for 2-part payment
   var $c_DepositPrice = 150;
   var $c_DepositDueDate = "June 1, 2016";
 
   // Use PayPal fee checkbox
-  var $c_UsePayPalFee = 1;
+  var $c_UsePayPalFee = 0;
 
   // Put checkbox before or after the label
   var $c_checkbox_before_label = 1;
