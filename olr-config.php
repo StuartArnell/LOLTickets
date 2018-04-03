@@ -192,7 +192,7 @@ class Online_Reg_Config_Class{
   //  array("label" => "T-Shirt Medium",    "abbrev" => "TShirtM", "price" => 14),
   //  array("label" => "T-Shirt Large",  "abbrev" => "TShirtL",  "price" => 14),
   //  array("label" => "T-Shirt Extra Large",  "abbrev" => "TShirtXL", "price" => 14),
-  );
+  // );
 
   // Membership options
   // var $c_member_single_price = 20;
