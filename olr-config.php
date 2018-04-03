@@ -86,13 +86,13 @@ class Online_Reg_Config_Class{
   // name attribute must be unique, including data, phone, radio, selections
   // required attribute is optional.
   var $c_aryField_Defs = array(
-    array("label" => "Street", "abbrev" => "Street", "name" => "street", "type" => "text", "size" => 30, "required" => 1),
-    array("label" => "City", "abbrev" => "City", "name" => "city", "type" => "text", "size" => 30, "required" => 1),
-    array("label" => "State", "abbrev" => "State", "name" => "state", "type" => "state", "size" => 2, "required" => 1),
-    array("label" => "Zip", "abbrev" => "Zip", "name" => "zip", "type" => "zip", "size" => 5, "required" => 1),
-    array("label" => "Email", "abbrev" => "Email", "name" => "email1", "type" => "email", "size" => 40, "required" => 1),
-    array("label" => "Number of Men Dancers", "abbrev" => "Men Dancers", "name" => "men_dancers", "type" => "num", "size" => 1, "required" => 1),
-    array("label" => "Number of Women Dancers", "abbrev" => "Women Dancers", "name" => "women_dancers", "type" => "num", "size" => 1, "required" => 1),
+    array("label" => "Street", "abbrev" => "Street", "name" => "street", "type" => "text", "size" => 30),
+    array("label" => "City", "abbrev" => "City", "name" => "city", "type" => "text", "size" => 30),
+    array("label" => "State", "abbrev" => "State", "name" => "state", "type" => "state", "size" => 2),
+    array("label" => "Zip", "abbrev" => "Zip", "name" => "zip", "type" => "zip", "size" => 5),
+    array("label" => "Email", "abbrev" => "Email", "name" => "email1", "type" => "email", "size" => 40),
+    array("label" => "Number of Men Dancers", "abbrev" => "Men Dancers", "name" => "men_dancers", "type" => "num", "size" => 1),
+    array("label" => "Number of Women Dancers", "abbrev" => "Women Dancers", "name" => "women_dancers", "type" => "num", "size" => 1),
     array("label" => "Custom Text", "abbrev" => "Custom Text", "name" => "custom_text", "type" => "text", "size" => 40),
     array("label" => "Custom Number", "abbrev" => "Custom Number", "name" => "custom_num", "type" => "num", "size" => 2),
     array("label" => "Custom Option", "abbrev" => "Custom Option", "name" => "custom_opt", "type" => "check", "size" => 1),
@@ -132,16 +132,12 @@ class Online_Reg_Config_Class{
   // default is item to be selected initially by default.
   // required attribute is optional.
   var $c_aryPhone_Fields = array(
-    array("label" => "Phone 1", "abbrev" => "Phone1", "name" => "phone1", "size" => 12, "required" => 1,
+    array("label" => "Phone Nbr (Mobile Preferred)", "abbrev" => "Phone 1", "name" => "phone1", "size" => 12, "required" => 1,
       "items" => array(
         array("label" => "Home", "value" => "Home", "default" => 1),
         array("label" => "Cell", "value" => "Cell"),
         array("label" => "Work", "value" => "Work") ) ),
-    array("label" => "Phone 2", "abbrev" => "Phone2", "name" => "phone2", "size" => 12, 
-      "items" => array(
-        array("label" => "Home", "value" => "Home"),
-        array("label" => "Cell", "value" => "Cell", "default" => 1), 
-        array("label" => "Work", "value" => "Work") ) ),
+    
   );
 
   // Radio Buttons.
@@ -160,7 +156,7 @@ class Online_Reg_Config_Class{
       ) ),
     array("label" => "Please Select a Number", "abbrev" => "Number1", 
       "name" => "number1", "abbrev" => "Number 1", "type" => "num", 
-      "size" => 1, "required" => 1,
+      "size" => 1, 
       "items" => array(
         array("label" => "One", "value" => 1),
         array("label" => "Two", "value" => 2),
@@ -181,7 +177,7 @@ class Online_Reg_Config_Class{
         array("label" => "Blue", "value" => "blue"),
          ) ),
     array("label" => "Please Select Another Number", "abbrev" => "Number2", 
-      "name" => "number2", "type" => "num", "size" => 2, "required" => 1,
+      "name" => "number2", "type" => "num", "size" => 2,
       "items" => array(
         array("label" => "", "value" => ""),
         array("label" => "One", "value" => 1),
@@ -192,7 +188,7 @@ class Online_Reg_Config_Class{
   // Attendance options.
   // Each item is (label, abbreviation, price).
   var $c_aryAttendance_Fields = array(
-    array("label" => "Adult", "abbrev" => "Adult", "price" => 85),
+    array("label" => "Attendee", "abbrev" => "Adult", "price" => 10),
     array("label" => "Student Jr High and up", "abbrev" => "Student", "price" => 45),
     array("label" => "Child 12 and under", "abbrev" => "Child", "price" => 35),
     array("label" => "CDSS Member Discount", "abbrev" => "CDSS", "price" => -5),
